@@ -23,6 +23,8 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 from setuptools import setup
 
+PACKAGE_NAME = "inbolt_rtde"
+SOURCE_DIRECTORY = "rtde"
 
 with open("VERSION", "rb") as f:
     version = f.read().decode("utf-8")
@@ -30,8 +32,9 @@ with open("VERSION", "rb") as f:
 
 
 setup(
-    name="UrRtde",
-    packages=["rtde"],
+    name=PACKAGE_NAME,
+    packages=[PACKAGE_NAME],
+    package_dir={PACKAGE_NAME: SOURCE_DIRECTORY},
     version=version,
     description="Real-Time Data Exchange (RTDE) python client + examples",
     install_requires=["numpy"],
