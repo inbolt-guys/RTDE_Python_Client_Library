@@ -49,3 +49,7 @@ class ConfigFile(object):
     def get_recipe(self, key):
         r = self.__dictionary[key]
         return r.names, r.types
+
+    @property
+    def recipe_keys(self):
+        return list(self.__dictionary.keys())
