@@ -21,16 +21,13 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import struct
-import socket
-import select
-import sys
 import logging
+import select
+import socket
+import struct
+import sys
 
-if sys.version_info[0] < 3:
-    import serialize
-else:
-    from rtde import serialize
+from . import serialize
 
 DEFAULT_TIMEOUT = 1.0
 

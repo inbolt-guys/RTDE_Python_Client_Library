@@ -22,8 +22,9 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import csv
-import numpy as np
 import logging
+
+import numpy as np
 
 from .rtde import LOGNAME
 
