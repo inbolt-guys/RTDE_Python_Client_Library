@@ -21,12 +21,10 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+import struct
 import sys
 
-sys.path.append("..")
-
-import struct
-from rtde import serialize
+from . import serialize
 
 
 class CSVBinaryWriter(object):

@@ -34,4 +34,5 @@ setup(
     packages=["rtde"],
     version=version,
     description="Real-Time Data Exchange (RTDE) python client + examples",
+    install_requires=["numpy"],
 )
