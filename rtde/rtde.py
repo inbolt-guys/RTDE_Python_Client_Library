@@ -102,6 +102,7 @@ class RTDE(object):
 
     def disconnect(self):
         if self.__sock:
+            self.__sock.shutdown(socket.SHUT_RDWR) #https://stackoverflow.com/a/598759
             self.__sock.close()
             self.__sock = None
         self.__conn_state = ConnectionState.DISCONNECTED
